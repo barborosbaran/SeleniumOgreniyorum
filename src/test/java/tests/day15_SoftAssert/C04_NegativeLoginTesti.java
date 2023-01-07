@@ -13,7 +13,7 @@ public class C04_NegativeLoginTesti {
     // giris yapilamadigini test edin
     QualityDemyPage qualitydemyPage= new QualityDemyPage();
 
-    @Test
+    @Test(groups = "smoke")
     public void yanlisEmailTesti(){
 
         Driver.getDriver().get("https://www.qualitydemy.com/");

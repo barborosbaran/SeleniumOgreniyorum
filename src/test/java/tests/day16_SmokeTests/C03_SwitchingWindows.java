@@ -25,6 +25,6 @@ public class C03_SwitchingWindows {
         String actualYazi=Driver.getDriver().findElement(By.tagName("h1")).getText();
 
         Assert.assertEquals(actualYazi,expectedYazi);
-        Driver.getDriver().quit();
+        Driver.quitDriver();
     }
 }

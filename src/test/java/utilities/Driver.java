@@ -23,15 +23,15 @@ public class Driver {
     public static WebDriver getDriver() {
 
 
-        String broweser = ConfigReader.getProperty("broweser");
+        String browser = ConfigReader.getProperty("browser");
 
         if (driver == null) {
 
-            switch (broweser) {
+            switch (browser) {
 
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driver=new ChromeDriver();
                     break;
 
                 case "firefox":
@@ -59,6 +59,13 @@ public class Driver {
         if (driver != null) {
             driver.close();
             driver = null;
+        }
+    }
+
+    public static void quitDriver(){
+        if (driver != null){
+            driver.quit();
+            driver=null;
         }
     }
 }

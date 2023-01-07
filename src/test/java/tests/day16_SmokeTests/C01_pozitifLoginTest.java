@@ -12,24 +12,24 @@ public class C01_pozitifLoginTest {
     @Test
     public void pozitifLoginTest(){
 
-        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+
+            // qualitydemy anasayfaya git
+            Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+
+            QualityDemyPage qualitydemyPage= new QualityDemyPage();
+            qualitydemyPage.ilkLoginLinki.click();
+
+            qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
+            qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
+
+            qualitydemyPage.loginButonu.click();
+
+            ReusableMethods.bekle(2);
 
 
-        QualityDemyPage qualityDemyPage=new QualityDemyPage();
-        qualityDemyPage.cookies.click();
-        ReusableMethods.bekle(3);
-        qualityDemyPage.ilkLoginLinki.click();
-        qualityDemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
-        qualityDemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
-        qualityDemyPage.loginButonu.click();
-
-        Assert.assertTrue(qualityDemyPage.basariliGirisCoursesLinki.isDisplayed());
-
-
-        ReusableMethods.bekle(3);
-        Driver.closeDriver();
-
-    }
+            Assert.assertTrue(qualitydemyPage.basariliGirisCoursesLinki.isDisplayed());
+            Driver.closeDriver();
+        }
 
 
 }
