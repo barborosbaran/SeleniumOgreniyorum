@@ -18,6 +18,9 @@ public class C01_pozitifLoginTest {
 
             QualityDemyPage qualitydemyPage= new QualityDemyPage();
             qualitydemyPage.ilkLoginLinki.click();
+        if (qualitydemyPage.cookies.isDisplayed()){
+            qualitydemyPage.cookies.click();
+        }
 
             qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
             qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
