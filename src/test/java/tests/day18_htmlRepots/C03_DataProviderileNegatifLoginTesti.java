@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import pages.QualityDemyPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C03_DataProviderileNegatifLoginTesti {
 
@@ -46,6 +47,8 @@ public class C03_DataProviderileNegatifLoginTesti {
         qualityDemyPage.loginButonu.click();
 
         Assert.assertTrue(qualityDemyPage.kullaniciEmailKutusu.isDisplayed());
+
+
 
 
     }

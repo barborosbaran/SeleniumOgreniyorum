@@ -23,7 +23,7 @@ public class Driver {
     public static WebDriver getDriver() {
 
 
-        String browser = ConfigReader.getProperty("browser");
+        String browser = ConfigReader.getProperty("browser"); //ayakci
 
         if (driver == null) {
 
