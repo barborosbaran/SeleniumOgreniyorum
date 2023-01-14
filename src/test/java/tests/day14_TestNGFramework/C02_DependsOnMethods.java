@@ -11,10 +11,12 @@ public class C02_DependsOnMethods {
     }
     @Test(dependsOnMethods = "ilkTest")
     public void ikinciTest(){
+
         System.out.println("ikinci test calisti");
     }
     @Test(dependsOnMethods = "ikinciTest")
     public void ucuncuTest(){
+
         System.out.println("ucuncu test calisti");
     }
 
